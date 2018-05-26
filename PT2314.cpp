@@ -181,11 +181,11 @@ void PT2314::gain(int v) {
 }
 
 bool PT2314::updateAudioSwitch() {
-	int audioByte = 0b01000000;
+	int audioByte = 0b01000000; // audio switch + gain +11.25dB.
 	// gain byte, 0b00011000 = no gain, 0b00010000 = +3.75dB, 0b00001000 = +7.5dB, 0b00000000 = +11.25dB
 	audioByte |= _gain;
 
-	if (_loudness){
+  if (_loudness){
 		audioByte |= 0x00;
 	} else {
 		audioByte |= 0x04;

@@ -48,9 +48,8 @@ private:
 	int _treble;
 	int volume_to_pt2314(int vol);
 	int eq_to_pt2314(int val);
-
-    int writeI2CChar(unsigned char c);
-    bool updateVolume();
+  int writeI2CChar(unsigned char c);
+  bool updateVolume();
 	bool updateAttenuation();
 	bool updateAudioSwitch();
 	bool updateBass();
